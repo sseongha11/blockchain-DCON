@@ -1,9 +1,12 @@
 {
-  "name": "blockchain-developer-bootcamp",
+  "name": "dcon",
   "version": "0.1.0",
   "description": "Decentralized Ethereum Token Exchange",
   "author": "sseongha00@gmail.com",
   "private": true,
+  "engines": {
+    "node": "8.11.1"
+  },
   "dependencies": {
     "apexcharts": "3.6.3",
     "babel-polyfill": "6.26.0",
