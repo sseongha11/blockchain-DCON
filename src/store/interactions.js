@@ -32,10 +32,16 @@ export const loadWeb3 = (dispatch) => {
 }
 
 export const loadAccount = async (web3, dispatch) => {
+  // revision
+  await window.ethereum.enable() // add
   const accounts = await web3.eth.getAccounts()
   const account = accounts[0]
-  dispatch(web3AccountLoaded(account))
-  return account
+  if(typeof account !== 'undefined') {
+    dispatch(web3AccountLoaded(account))
+    return account
+  } else {
+    window.alert('account is undefined')
+  }
 }
 
 export const loadToken = async (web3, networkId, dispatch) => {
